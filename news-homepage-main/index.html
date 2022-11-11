@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="shortcut icon" href="#">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet"> 
@@ -25,7 +26,7 @@
             <div class="popout-closed">
               <img src="assets/images/icon-menu.svg" alt="menu-hamburger-icon">
             </div>
-            <div class="popoutopen">
+            <div class="popoutopen hidden">
               <img src="assets/images/icon-menu-close.svg" alt="menu-close-icon">
               <div class="mobile-nav-links">
                 <a href="#">Home</a>
@@ -38,7 +39,7 @@
           </div>
         </div>
 
-        <div class="nav-fullscreen">
+        <div class="nav-fullscreen hidden">
           <img src="assets/images/logo.svg" alt="logo">
 
           <div class="nav-links">
@@ -52,7 +53,14 @@
         
       </nav>
       <section class="hero">
-        <div class="hero-image"></div>
+        <div class="hero-image">
+          <div class="mobile-image">
+            <img src="assets/images/image-web-3-mobile.jpg" alt="mobile hero image">
+          </div>
+          <div class="desktop-image hidden">
+            <img src="assets/images/image-web-3-desktop.jpg" alt="desktop hero image">
+          </div>
+        </div>
         <h1 class="hero-h1">The Bright Future of Web 3.0?</h1>
         <div class="hero-description">
           <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
@@ -85,24 +93,24 @@
       </section>
 
       <section class="cards">
-        <div class="card1">
-          <img src="assets/images/image-retro-pcs.jpg" alt="retro-card-pic">
+        <div class="card">
+          <img class="card-image" src="assets/images/image-retro-pcs.jpg" alt="retro-card-pic">
           <div class="card-info">
             <h2>01</h2>
             <h3>Reviving Retro PCs</h3>
             <p>What happens when old PCs are given modern upgrades?</p>
           </div>
         </div>
-        <div class="card2">
-          <img src="assets/images/image-top-laptops.jpg" alt="laptop-card-pic">
+        <div class="card">
+          <img class="card-image" src="assets/images/image-top-laptops.jpg" alt="laptop-card-pic">
           <div class="card-info">
             <h2>02</h2>
             <h3>Top 10 Laptops of 2022</h3>
             <p>Our best picks for various needs and budgets.</p>
           </div>
         </div>
-        <div class="card3">
-          <img src="assets/images/image-gaming-growth.jpg" alt="gaming-card-pic">
+        <div class="card">
+          <img class="card-image" src="assets/images/image-gaming-growth.jpg" alt="gaming-card-pic">
           <div class="card-info">
             <h2>03</h2>
             <h3>The Growth of Gaming</h3>
