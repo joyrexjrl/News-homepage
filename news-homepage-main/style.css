@@ -50,11 +50,33 @@ a{
     padding: 1.5rem 0;
 }
 
+.desktop-image{
+    display: none;
+}
+
 .nav-fullscreen,
 .nav-mobile{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.nav-fullscreen{
+    display: none;
+}
+
+.fullscreen-nav-links{
+    display: flex;
+    gap: 2rem;
+    
+}
+
+.fullscreen-nav-links a{
+    transition: color 0.3s ease-in;
+}
+
+.fullscreen-nav-links a:hover{
+    color: var(--soft-red);
 }
 
 .hero{
@@ -77,6 +99,12 @@ a{
     max-width: 150px;
     padding: .5rem;
     margin-top: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in;
+}
+
+.read-more:hover{    
+    background-color: var(--very-dark-blue);
 }
 
 .divider-line{
@@ -94,11 +122,19 @@ a{
 
 .hero-info-block h2{
     color: var(--soft-orange);
+    font-weight: 600;
+    font-size: 2rem;
 }
 
 .hero-info-block h3{
     color: white;
     font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease-in;
+}
+
+.hero-info-block h3:hover {
+    color: var(--soft-orange);    
 }
 
 .hero-info-block p{
@@ -132,12 +168,73 @@ a{
 
 .card-info h3{
     font-weight: 900;
+    cursor: pointer;
+    transition: color 0.3s ease-in;
+}
+
+.card-info h3:hover{
+    color: var(--soft-red);
 }
 
 .attribution{
-    text-align: center;
+    text-align: center;    
+}
+
+.attribution a{
+    transition: color 0.3s ease-in;
+}
+
+.attribution a:hover{
+    color: var(--soft-red);
 }
 
 @media (min-width: 800px){
+    .container{
+        max-width: 1100px;
+    }
 
+    .nav-mobile{
+        display: none;
+    }
+
+    .nav-fullscreen{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .mobile-image{
+        display: none;
+    }
+
+    .desktop-image{
+        display: grid;        
+    }
+
+    .hero-image{
+        grid-area: image;
+    }
+
+    .hero-h1{
+        grid-area: hero-h1;
+    }
+
+    .hero-description{
+        grid-area: hero-description;
+    }
+
+    .hero-info-block{
+        grid-area: hero-info-block;
+    }
+
+    .hero{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "image image hero-info-block"
+        "hero-h1 hero-description hero-info-block";
+    }
+
+    .cards{
+        flex-direction: row;
+    }
 }
